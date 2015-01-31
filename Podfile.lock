@@ -1,0 +1,25 @@
+PODS:
+  - AsyncDisplayKit (1.1.1):
+    - AsyncDisplayKit/ASDealloc2MainObject (= 1.1.1)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.1.1)
+  - CocoaLumberjack (1.9.2):
+    - CocoaLumberjack/Extensions (= 1.9.2)
+  - CocoaLumberjack/Core (1.9.2)
+  - CocoaLumberjack/Extensions (1.9.2):
+    - CocoaLumberjack/Core
+  - Masonry (0.6.0)
+  - Reveal-iOS-SDK (1.0.7)
+
+DEPENDENCIES:
+  - AsyncDisplayKit
+  - CocoaLumberjack
+  - Masonry
+  - Reveal-iOS-SDK
+
+SPEC CHECKSUMS:
+  AsyncDisplayKit: 897b28140c6c73fbe8d6168f19ce7cbd87c94ee8
+  CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
+  Masonry: 0bc111d6902e3a55ff8423bcbdf7155261806547
+  Reveal-iOS-SDK: 7ee5e9b37ef13dcd93ae1736c1b72c7c650da3e3
+
+COCOAPODS: 0.35.0
