@@ -85,6 +85,7 @@
 {
     NSDictionary *sect = [_data.sections objectAtIndex:section];
     TableHeaderNode *node = [[TableHeaderNode alloc] initWithTitle:[sect objectForKey:@"title"]];
+    [node measure:CGSizeMake(tableView.bounds.size.width, FLT_MAX)];
     
     return node.view;
 }

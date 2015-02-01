@@ -53,6 +53,7 @@ static const CGFloat kOuterPadding = 16.0f;
 - (void)layout
 {
     
+    /*
     //CGSize textSize = _textNode.calculatedSize;
     CGSize textSize1 = [_textNode measure:CGSizeMake(self.frame.size.width, self.frame.size.height)];
     CGSize textSize = _textNode.calculatedSize;
@@ -60,6 +61,11 @@ static const CGFloat kOuterPadding = 16.0f;
     
     //float w = self.frame.size.width - (2 * kOuterPadding);
     _textNode.frame = CGRectMake(kOuterPadding, kOuterPadding, textSize.width, textSize.height);
+    */
+    
+    CGPoint textOrigin = CGPointMake(kOuterPadding, kOuterPadding);
+    _textNode.frame = (CGRect){ .origin = textOrigin, .size = _textNode.calculatedSize };
+
     
 }
 
