@@ -18,6 +18,7 @@
 }
 
 @property(nonatomic, strong) DataSource *data;
+@property(nonatomic, strong) NSMutableDictionary *headers;
 
 @end
 
@@ -40,6 +41,7 @@
     _tableView.frame = self.view.bounds;
     [_tableView reloadData];
 
+    _headers = [[NSMutableDictionary alloc] init];
 }
 
 - (void)viewWillLayoutSubviews
@@ -83,10 +85,15 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    id key = @(section);
     NSDictionary *sect = [_data.sections objectAtIndex:section];
-    TableHeaderNode *node = [[TableHeaderNode alloc] initWithTitle:[sect objectForKey:@"title"]];
+    TableHeaderNode *node = _headers[key];
+    if (!node) {
+        node = [[TableHeaderNode alloc] initWithTitle:[sect objectForKey:@"title"]];
+        _headers[key] = node;
+    }
     [node measure:CGSizeMake(tableView.bounds.size.width, FLT_MAX)];
-    
+
     return node.view;
 }
 
